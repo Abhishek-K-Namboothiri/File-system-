@@ -1,0 +1,48 @@
+mount
+unmount /dev/sda1
+mount
+cat /etc/fstab
+blkid
+mount /dev/sda1 /mnt/
+cd /mnt/
+ls
+mount
+cd
+umount /mnt/
+fdisk /dev/sda1
+# p : to print
+# d : to delete
+# n : to form new partition
++10G
+w
+cat /proc./prtitions
+mkfs.ext4
+blkid
+mkfs.ext4 /dev/sda1
+mount /dev/sda1 /mnt/
+cd /mnt/
+ls
+touch file1
+mount -h 
+cd
+umount /mnt/
+mount -o ro /dev/sda1 /mnt/
+cd /mnt
+touch file2
+cd /mnt/
+umount /mnt
+nano /etc/fstab
+fstab
+mount -a
+e2label
+e2label /dev/sda1 data1
+umount /mnt
+nano /etc/fstab
+mount -a
+cat /proc/cmdline
+mount -0o remount,ro /mnt/
+mount
+fsck /dev/sda1
+sync
+cat /proc/meminfo
+ps -ef
